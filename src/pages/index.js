@@ -10,10 +10,10 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-        
+
       <div className="episodes_wrapper layout">
         {epidodes.map((data, i) => (
-          <EpisodeListItem data={data.node.data} key={i} />
+          <EpisodeListItem data={data.node} key={i} />
         ))}
       </div>
     </Layout>
