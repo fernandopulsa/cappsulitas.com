@@ -6,11 +6,19 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-prismic`,
+      options: {
+        repositoryName: `cappsulitas`,
+        linkResolver: ({ node, key, value }) => post => `/${post.uid}`,
       },
     },
     `gatsby-transformer-sharp`,

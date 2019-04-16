@@ -1,0 +1,15 @@
+.btn_wrapper {
+  display: flex;
+  justify-content: center;
+  button {
+    background-color: var(--corpo);
+    border: none;
+    font-weight: bold;
+    padding: 16px 32px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.1em;
+    cursor: pointer;
+  }
+}
