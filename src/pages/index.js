@@ -6,10 +6,9 @@ import EpisodeListItem from "../components/home/episode-list-item"
 
 const IndexPage = ({ data }) => {
   const epidodes = data.allPrismicEpisode.edges
-  console.log("TCL: IndexPage -> epidodes", epidodes)
   return (
     <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Home" keywords={[`podcast`, `tecnologia`, `productividad`]} />
 
       <div className="episodes_wrapper layout">
         {epidodes.map((data, i) => (
@@ -23,7 +22,7 @@ export default IndexPage
 
 export const query = graphql`
   {
-    allPrismicEpisode {
+    allPrismicEpisode(sort: { fields: [data___number], order: DESC }) {
       edges {
         node {
           id
