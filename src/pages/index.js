@@ -1,21 +1,51 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import EpisodeListItem from "../components/home/episode-list-item"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+const IndexPage = ({ data }) => {
+  const epidodes = data.allPrismicEpisode.edges
+  return (
+    <Layout>
+      <SEO title="Home" keywords={[`podcast`, `tecnologia`, `productividad`]} />
 
+      <div className="episodes_wrapper layout">
+        {epidodes.map((data, i) => (
+          <EpisodeListItem data={data.node} key={i} />
+        ))}
+      </div>
+    </Layout>
+  )
+}
 export default IndexPage
+
+export const query = graphql`
+  {
+    allPrismicEpisode(sort: { fields: [data___number], order: DESC }) {
+      edges {
+        node {
+          id
+          uid
+          data {
+            titulo {
+              text
+            }
+            date
+            number
+            category
+            mp3_url {
+              url
+            }
+            summary {
+              text
+            }
+            text {
+              html
+            }
+          }
+        }
+      }
+    }
+  }
+`

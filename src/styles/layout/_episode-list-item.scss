@@ -1,0 +1,31 @@
+.episode_item {
+  margin-bottom: 80px;
+  border-radius: 7px;
+  transition: all 0.4s ease;
+
+  .category {
+    display: inline-block;
+    color: #333;
+    font-size: 0.9em;
+    margin-bottom: 8px;
+    border-bottom: 2px solid #fdc00a;
+  }
+  .title {
+    font-size: 1.5em;
+    color: var(--corpo);
+    font-weight: 500;
+  }
+
+  .date {
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+
+  .text {
+    color: rgb(156, 156, 156);
+    margin-bottom: 16px;
+  }
+  audio {
+    width: 100%;
+  }
+}

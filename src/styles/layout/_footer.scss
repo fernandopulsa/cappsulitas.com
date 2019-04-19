@@ -1,0 +1,13 @@
+footer {
+  color: var(--corpo);
+  margin-bottom: 24px;
+
+  .created {
+    font-size: 0.9em;
+    margin-top: 8px;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
