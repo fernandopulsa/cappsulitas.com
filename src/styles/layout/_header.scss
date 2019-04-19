@@ -1,2 +1,30 @@
 header {
+  margin-top: 40px;
+  margin-bottom: 24px;
+  color: var(--corpo);
+}
+h1 {
+  font-size: 3em;
+  margin-bottom: 16px;
+}
+h3 {
+  background-color: #fdc00a;
+  display: inline-block;
+  color: #333;
+  margin-top: 0;
+}
+.links_wrapper {
+  display: flex;
+  justify-content: flex-start;
+
+  > div {
+    margin-right: 24px;
+    border-bottom: 2px solid var(--corpo);
+    padding-bottom: 2px;
+  }
+}
+.giones {
+  margin-top: 24px;
+  white-space: nowrap;
+  overflow: hidden;
 }

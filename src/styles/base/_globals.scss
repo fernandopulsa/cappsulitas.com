@@ -1,19 +1,15 @@
 :root {
-  --corpo: #ff787a;
-  --corpo-light: #ff9d9b;
-  --corpo-dark: #051d49;
-  --corpo-dark-ds: #373e5a;
+  --corpo: #009386;
 
   --w: #fff;
   --b: #333;
   --grey: #aeaeae;
   --backgrey: #f7f7f7;
-  --text-color: #7e7e7e;
+  --text-color: var(--b);
   --anchor-color: #7c898c;
 
   color: var(--corpo-dark);
   font-family: "Fira Mono", monospace, sans-serif;
-
 }
 
 *,
@@ -29,7 +25,7 @@
 p {
   margin: 0;
   color: var(--text-color);
-  font-size: 1.1em;
+  font-size: 1em;
   line-height: 1.4em;
 }
 
@@ -44,7 +40,7 @@ img {
 ////
 
 .layout {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding-left: 16px;
   padding-right: 16px;
