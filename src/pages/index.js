@@ -39,6 +39,7 @@ export const query = graphql`
             }
             summary {
               text
+              html
             }
             text {
               html

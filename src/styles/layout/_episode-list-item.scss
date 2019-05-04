@@ -17,15 +17,34 @@
   }
 
   .date {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     font-size: 1em;
   }
 
   .text {
-    color: rgb(156, 156, 156);
-    margin-bottom: 16px;
+    margin-bottom: 32px;
+
+    p {
+      color: rgb(156, 156, 156);
+      margin-bottom: 16px;
+    }
+
+    a {
+      text-decoration: underline;
+    }
   }
   audio {
     width: 100%;
+    margin-bottom: 32px;
+    color: var(--corpo);
+    text-decoration: underline;
+  }
+  .link_todetail {
+    a {
+      font-size: 0.9em;
+      background-color: var(--corpo);
+      color: white;
+      padding: 4px 12px;
+    }
   }
 }
